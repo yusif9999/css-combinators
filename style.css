@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+}
+
+.container{
+    background-color: #fff;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.container > h1{
+    color: teal;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container .cards{
+    margin-top: 30px;
+}
+
+.container .cards::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+
+.cards > div{
+    width: 31%;
+    border: 2px solid #aaa;
+    margin: 1%;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.cards .card img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.cards .card img + h2{
+    margin: 15px 25px;
+    color: teal;
+    text-align: center;
+}
+
+.cards > div h2 + div span{
+    display: inline-block;
+    padding: 8px;
+    background-color: teal;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 25px;
+    &:first-child{
+        margin-right: 10px;
+    }
+}
+
+.cards .card div + p{
+    margin: 25px 0;
+    i{
+        color: goldenrod;
+    }
+}
+
+.cards div p + a{
+    display: inline-block;
+    background-color: teal;
+    color: #fff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.cards div a + div{
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    border-left: 5px solid teal;
+    font-style: italic;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.cards .card a + div{
+    display: none;
+}
+
+.cards .card:hover a + div{
+    display: block;
+}
+
+.cards .card:hover{
+    outline: 3px solid skyblue;
+}
+
+.cards > div > span{
+    display: inline-block;
+    padding: 8px 14px;
+    color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: 1000;
+}
+
+.cards > div:first-child > span{
+    background-color: orange;
+}
+
+.cards > div:nth-child(2) > span{
+    background-color: #8e44ad;
+}
+
+.cards > div:last-child > span{
+    background-color: orangered;
+}
+
+.container{
+    .tableContainer{
+        margin-top: 36px;
+        h2{
+            color: teal;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .tableResponsive{
+            table{
+                width: 100%;
+                text-align: center;
+                border-collapse: collapse;
+                thead{
+                    tr{
+                        th{
+                            padding: 15px;
+                            background-color: teal;
+                            color: #fff;
+                            border: 1px solid #95a5a6;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            padding: 15px;
+                            border: 1px solid #95a5a6;
+                            
+                        }
+                        &:hover{
+                            background-color: goldenrod;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
